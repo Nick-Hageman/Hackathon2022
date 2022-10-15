@@ -1,10 +1,8 @@
 import sqlite3
-import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By #Need this to select elements
 from selenium.webdriver.chrome.service import Service
 
-#url = 'https://www.youtube.com/c/FKnight/videos' 
 url = 'https://dining.uiowa.edu/burge-market-place'
 
 #Connect to SQLite Database
@@ -116,9 +114,16 @@ def getFoodList(element, menu, started):
                 #c.execute('''INSERT INTO videos VALUES(?, ?)''', (date, i.text))
                 print(x.text)
     
-def getAllFood():
+def getAllFood(url, diningHall):
+    conn = sqlite3.connect("./database/" + diningHall + ".db")
+    driver.get(url)
+    c = conn.cursor()
+    c.execute('''DROP TABLE {}'''.format(diningHall))
     getFoodList(driver.find_element(By.XPATH, './/*[@id="location-menu"]/div/ul/li[1]/a').click(),driver.find_elements(By.CLASS_NAME, "menu-course"), True)
     getFoodList(driver.find_element(By.XPATH, './/*[@id="location-menu"]/div/ul/li[2]/a').click(),driver.find_elements(By.CLASS_NAME, "menu-course"), False)
     getFoodList(driver.find_element(By.XPATH, './/*[@id="location-menu"]/div/ul/li[3]/a').click(),driver.find_elements(By.CLASS_NAME, "menu-course"), False)
 
-getAllFood()
+#for i in breakfast:
+    #c.execute('''INSERT INTO burge VALUES(?, ?)''', (date, i.text))
+
+#getAllFood()
