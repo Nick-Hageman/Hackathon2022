@@ -1,0 +1,33 @@
+burgeURL = https://dining.uiowa.edu/burge-market-place'
+catlettURL = 'https://dining.uiowa.edu/catlett-market-place'
+hillcrestURL = 'https://dining.uiowa.edu/hillcrest-market-place'
+
+ title = video.find_element(By.XPATH,'.//*[@id="video-title"]').text
+ 
+breakfast entree----------//*[@id="Breakfast"]/div/div[2]/div[1]
+bacon egg and cheese------//*[@id="Breakfast"]/div/div[2]/div[2]/div[1]/div[1]
+egg cheese buiscut--------//*[@id="Breakfast"]/div/div[2]/div[2]/div[2]/div[1]
+
+entree--------------------//*[@id="Breakfast"]/div/div[2]/div[3]
+tofu----------------------//*[@id="Breakfast"]/div/div[2]/div[4]/div[1]/div[1]
+
+
+Steps:
+1.	Parse the website(Burge to start)
+2.	Put Burge values into database
+a.	Parse for one day first
+b.	Breakfast
+c.	Lunch
+d.	Dinner
+3.	Parse Hillcrest and Catlett
+4.	Create search function for meals
+5.	Create front-end web application for search engine
+STRETCH GOALS
+1.	Include a calendar and favorite meals, shows when your favorite meals are on the calendar
+2.	Include other dining places (ex. fire-up grill)
+3.  Make 1 liner
+
+
+//*[@id="P1319097113"]
+
+/html/body/div[3]/div/div[2]/div/div/article/div/div[1]/div/div[1]/div[2]/div/div/div[1]/div/input
