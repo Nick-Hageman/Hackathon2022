@@ -25,7 +25,7 @@ d.	Dinner
 STRETCH GOALS
 1.	Include a calendar and favorite meals, shows when your favorite meals are on the calendar
 2.	Include other dining places (ex. fire-up grill)
-3.  Make 1 liner
+3.  Make 1 liners
 
 
 //*[@id="P1319097113"]
