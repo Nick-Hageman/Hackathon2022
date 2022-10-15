@@ -15,17 +15,17 @@ tofu----------------------//*[@id="Breakfast"]/div/div[2]/div[4]/div[1]/div[1]
 Steps:
 1.	Parse the website(Burge to start)
 2.	Put Burge values into database
-a.	Parse for one day first
-b.	Breakfast
-c.	Lunch
-d.	Dinner
+    b.	Breakfast
+    c.	Lunch
+    d.	Dinner
 3.	Parse Hillcrest and Catlett
 4.	Create search function for meals
 5.	Create front-end web application for search engine
 STRETCH GOALS
-1.	Include a calendar and favorite meals, shows when your favorite meals are on the calendar
-2.	Include other dining places (ex. fire-up grill)
-3.  Make 1 liners
+1.  Parse for more than one day
+2.	Include a calendar and favorite meals, shows when your favorite meals are on the calendar
+3.	Include other dining places (ex. fire-up grill)
+4.  Make 1 liner
 
 
 //*[@id="P1319097113"]
