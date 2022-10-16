@@ -2,8 +2,9 @@ import sqlite3
 from selenium import webdriver
 from selenium.webdriver.common.by import By #Need this to select elements
 from selenium.webdriver.chrome.service import Service
+import csv
 
-url = 'https://dining.uiowa.edu/burge-market-place'
+url = 'https://dining.uiowa.edu/hillcrest-market-place'
 
 #Connect to SQLite Database
 conn = sqlite3.connect("./database/burge.db") # Establish connection to Database
@@ -130,10 +131,14 @@ def getAllFood(url, diningHall):
 #    c.execute('''INSERT INTO burge (lunch) VALUES(?)''', (j,))
 #for k in dinner:
 #    c.execute('''INSERT INTO burge (dinner) VALUES(?)''', (k,))
+#
+for i in range(min(len(lunch), len(dinner))):
+    c.execute('''INSERT INTO burge VALUES(?, ?, ?)''', ("No Breakfast", lunch[i], dinner[i]))
 
-for i in range(min(len(breakfast), len(lunch), len(dinner))):
-    c.execute('''INSERT INTO burge VALUES(?, ?, ?)''', (breakfast[i], lunch[i], dinner[i]))
 
+#with open("output.csv", "w") as f:
+#    writer = csv.writer(f)
+#    writer.writerows([breakfast + lunch + dinner])
 
 conn.commit()
 #getAllFood()

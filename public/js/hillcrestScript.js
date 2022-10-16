@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    $.get('data.csv',function(data) {
+    $.get('hillcrest.csv',function(data) {
         console.log(data);
         var html ='<table>';
         var rows = data.split("\n");

@@ -52,7 +52,7 @@ nav img {
 }
 
 form{
-    margin:250px auto;
+    margin:100px auto;
     display:flex;
     flex-direction:column;
     display: flex;
@@ -95,11 +95,18 @@ input[type=text]:focus {
   div .container {
     background-color:rgb(255, 255, 255);
   }
+  
+  td:hover {
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+    background-color: -50%;
+    cursor: pointer;
+}
+
   th, td {
     padding: 15px;
+    width: 300px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-    background-color: #04AA6D;
-    color: white;
+    background-color: #d6a800;
+    color: Black;
   }
-  tr:hover {background-color: coral;}
