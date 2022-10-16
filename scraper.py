@@ -89,7 +89,6 @@ for item3 in menu3:
 
 #insert Date into database
 #c.execute('''INSERT INTO videos VALUES(?, ?, ?)''', (food, date))
-conn.commit()
 
 #---INSERTING DATA---
 #c.execute('''INSERT INTO videos VALUES(?,?,?)''', (title, views, likes))
@@ -123,7 +122,13 @@ def getAllFood(url, diningHall):
     getFoodList(driver.find_element(By.XPATH, './/*[@id="location-menu"]/div/ul/li[2]/a').click(),driver.find_elements(By.CLASS_NAME, "menu-course"), False)
     getFoodList(driver.find_element(By.XPATH, './/*[@id="location-menu"]/div/ul/li[3]/a').click(),driver.find_elements(By.CLASS_NAME, "menu-course"), False)
 
-#for i in breakfast:
-    #c.execute('''INSERT INTO burge VALUES(?, ?)''', (date, i.text))
+#Insert data into DB
+for i in breakfast:
+    c.execute('''INSERT INTO burge (breakfast) VALUES(?)''', (i,))
+for j in lunch:
+    c.execute('''INSERT INTO burge (lunch) VALUES(?)''', (j,))
+for k in dinner:
+    c.execute('''INSERT INTO burge (dinner) VALUES(?)''', (k,))
 
+conn.commit()
 #getAllFood()
