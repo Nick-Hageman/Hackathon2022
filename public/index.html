@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-        h1 {text-align: center;}
-    </style>
 
 <head>
-    <h1>University of Iowa Dining Hall</h1>
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/db.js"></script>
-    <a href="result.html"> Click here to search another food </a>
 </head>
 
 <body background="../img/banner.png" >
-    <section class="header"></section>
-        <nav>
+    <section class="header">
+        <nav style="position:fixed; right: 3px; top: -5px">
             <a href="https://uiowa.edu/"><img src="../img/logo.png"> </a>
             <div class="nav-links">
                 <ul>
@@ -24,6 +19,7 @@
                 </ul>
             </div>
         </nav>
+    </section>
     <form action="result.html" method="POST">    
         <input type = "text" name="search" id = "search" placeholder = "Enter your favorite food... " maxlength = "20" style="background-color: black" />
         <input type="Submit" onclick="handleSubmit()"/>
