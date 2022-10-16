@@ -1,4 +1,8 @@
-
+html {
+    height: 100%;
+    margin: auto;
+    width: 960px;
+  }
 
 nav{
     height: 12%;
@@ -58,7 +62,6 @@ body{
     width: 100%;
     height: 50vh;
     margin: 0;
-    overflow: hidden;
     padding: 30px;
     background-image: linear-gradient
     (rgba(4,9,39,0.7),rgba(4,9,30,0.7));
@@ -88,3 +91,15 @@ input[type=text]:focus {
   input[type=text] {
     color: gray;
   }
+
+  div .container {
+    background-color:rgb(255, 255, 255);
+  }
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: #04AA6D;
+    color: white;
+  }
+  tr:hover {background-color: coral;}
