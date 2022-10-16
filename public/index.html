@@ -3,20 +3,30 @@
     <style>
         h1 {text-align: center;}
     </style>
+
 <head>
     <h1>University of Iowa Dining Hall</h1>
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/db.js"></script>
     <a href="result.html"> Click here to search another food </a>
-
 </head>
-<body>
-    
+
+<body background="../img/banner.png" >
+    <section class="header"></section>
+        <nav>
+            <a href="https://uiowa.edu/"><img src="../img/logo.png"> </a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="https://dining.uiowa.edu/burge-market-place">BURGE</a></li>
+                    <li><a href="https://dining.uiowa.edu/hillcrest-market-place">HILLCREST</a></li>
+                    <li><a href="https://dining.uiowa.edu/catlett-market-place">CATLETT</a></li>
+                </ul>
+            </div>
+        </nav>
     <form action="result.html" method="POST">    
-        <input type = "text" name="search" id = "search" placeholder = "Enter your favorite food... " maxlength = "20"/>
+        <input type = "text" name="search" id = "search" placeholder = "Enter your favorite food... " maxlength = "20" style="background-color: black" />
         <input type="Submit" onclick="handleSubmit()"/>
     </form>
-
 </body>
 </html>
