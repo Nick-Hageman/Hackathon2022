@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+        h1 {text-align: center;}
+    </style>
 <head>
-
-    <title>
-        Search Page
-    </title>
+    <h1>University of Iowa Dining Hall</h1>
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/db.js"></script>
@@ -12,11 +12,11 @@
 
 </head>
 <body>
-
+    
     <form action="result.html" method="POST">    
-        <input type = "text" name="search" id = "search" placeholder = "Enter your favorite food" maxlength = "15"/>
+        <input type = "text" name="search" id = "search" placeholder = "Enter your favorite food... " maxlength = "20"/>
         <input type="Submit" onclick="handleSubmit()"/>
-        </form>
+    </form>
 
 </body>
 </html>
