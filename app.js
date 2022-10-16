@@ -1,3 +1,12 @@
+//DB
+const Sequelize = require("sequelize");
+
+const sequelize = new Sequelize({
+  dialect: "sqlite",
+  storage: '/database/burge.db'
+});
+
+module.exports = sequelize;
 var express = require('express'),
   config = require('./config/config');
 
