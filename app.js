@@ -20,6 +20,5 @@ app.get('/', function(req, res) {
 
 require('./config/express')(app, config);
 
-app.listen('3000', function(){
-    console.log("Server started on port 3000...")
-})
+console.log('Starting up on: ' + config.port);
+app.listen(config.port);
