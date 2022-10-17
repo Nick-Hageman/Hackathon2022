@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By #Need this to select elements
 from selenium.webdriver.chrome.service import Service
 import csv
 
-url = 'https://dining.uiowa.edu/hillcrest-market-place'
+url = 'https://dining.uiowa.edu/burge-market-place'
 
 #Connect to SQLite Database
 conn = sqlite3.connect("./database/burge.db") # Establish connection to Database
@@ -48,7 +48,7 @@ for item in menu: #Parse through burge
          print(i.text)
          if (len(i.text) == 0):
             break
-
+print("-----------------------------------------------------------------")
 element = driver.find_element(By.XPATH, './/*[@id="location-menu"]/div/ul/li[2]/a').click() # Switches to Lunch Menu
 started = False
 #New menu elements (lunch)
@@ -64,7 +64,7 @@ for item2 in menu2:
             #c.execute('''INSERT INTO videos VALUES(?, ?)''', (date, i.text))
             lunch.append(x.text)
             print(x.text)
-
+print("-----------------------------------------------------------------")
 element = driver.find_element(By.XPATH, './/*[@id="location-menu"]/div/ul/li[3]/a').click() # Switches to Lunch Menu
 menu3 = driver.find_elements(By.CLASS_NAME, "menu-course") #Switches to Dinner Menu
 started = False
@@ -132,8 +132,8 @@ def getAllFood(url, diningHall):
 #for k in dinner:
 #    c.execute('''INSERT INTO burge (dinner) VALUES(?)''', (k,))
 #
-for i in range(min(len(lunch), len(dinner))):
-    c.execute('''INSERT INTO burge VALUES(?, ?, ?)''', ("No Breakfast", lunch[i], dinner[i]))
+for i in range(min(len(breakfast), len(lunch), len(dinner))):
+    c.execute('''INSERT INTO burge VALUES(?, ?, ?)''', (breakfast[i], lunch[i], dinner[i]))
 
 
 #with open("output.csv", "w") as f:
