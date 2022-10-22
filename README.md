@@ -1,14 +1,16 @@
 # Hackathon2022
 
-
 TEAM
 - [Jake Bullock](https://github.com/JakeBull77)
 - [Gabe Solis](https://github.com/Gsolis07)
 - [Nate Schaefer](https://github.com/Nate-Schaefer)
 
+
 Project Inspiration
 - Our team is tired of searching through the breakfast/lunch/dinner menus of each dining hall to find if our favorite meals are being served
 - We wanted to create a web application to solve this problem by creating a more personalized and accessible way to find our favorite meals
+
+<img src="public/img/demo.PNG" width="900;" height="500px">
 
 Plan
 - Use a web scraper to obtain dining hall data (foods being served for breakfast/lunch/dinner)
